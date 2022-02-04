@@ -1,0 +1,136 @@
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.modal button {
+    outline: none;
+    cursor: pointer;
+    border: 0;
+}
+.modal > section {
+    width: 90%;
+    max-width: 500px;
+    height: 400px;
+    margin:0 auto;
+    border-radius: .3rem;
+    background-color: #fff;
+    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    animation: modal-show .3s;
+    overflow: hidden;
+}
+.modal > section > main {
+    padding: 16px;
+}
+.modal .등록 {
+    width: 150px;
+    height: 50px;
+    background-color: rgba(59, 120, 231, 1);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 40px;
+    margin-left: 65px;
+    float: left;
+}
+.modal .등록:active {
+    background-color: rgb(29, 60, 117);
+}
+.modal .등록:hover {
+    background-color: rgb(29, 60, 117);
+}
+.modal .등록:disabled {
+    background-color: grey;
+    color: lightgray;
+}
+.modal .취소 {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: rgba(59, 120, 231, 1);
+    font-size: 20px;
+    font-weight: bold;
+    border: 3px solid rgba(59, 120, 231, 1);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 40px;
+    float: left;
+}
+.modal .취소:active {
+    background-color: rgb(29, 60, 117);
+    color: white;
+}
+.modal .취소:hover {
+    background-color: rgb(29, 60, 117);
+    color: white;
+}
+.modal .취소:disabled {
+    background-color: grey;
+    color: lightgray;
+}
+.modal .modalmain .inputWorker {
+    margin-left: 35px;
+    margin-top: 20px;
+    line-height: 40px;
+}
+.modal .modalmain .inputWorker input {
+    width: 250px;
+    height: 40px;
+    margin-left: 22px;
+    background-color: white;
+    border: 1px solid grey;
+    text-align: center;
+}
+.modal .modalmain .radioBtn {
+    margin-left: 35px;
+    margin-top: 25px;
+    line-height: 30px;
+}
+.modal .modalmain .radioBtn input {
+    width: 50px;
+    height: 25px;
+    vertical-align: text-top;
+    background-color: white;
+    border: 1px solid grey;
+}
+.modal .modalmain .radioBtn label {
+    width: 50px;
+    height: 25px;
+    margin-left: 0px;
+    vertical-align: 7px;
+}
+.modal.openModal {
+    display: flex;
+    align-items: center;
+    /* 팝업이 열릴때 스르륵 열리는 효과 */
+    animation: modal-bg-show .3s;
+}
+@keyframes modal-show {
+    from {
+        opacity: 0;
+        margin-top: -50px;
+    }
+    to {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+@keyframes modal-bg-show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
